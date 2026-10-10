@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>CamWatermark — Photo Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=DM+Mono&family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="topbar"><a class="logo" href="#">CAM<span>WATERMARK</span></a><span class="status"><i></i> LOCAL PROCESSING</span><button id="downloadTop" class="button primary" disabled>Export image ↗</button></header>
+  <main class="shell">
+    <section class="hero"><div><p class="eyebrow">PHOTO STYLING STUDIO / 01</p><h1>Make every frame<br><em>look intentional.</em></h1><p class="lede">Bring your Nikon photos to life with cinematic colour grades and a signature watermark — processed entirely on your device.</p></div><label class="drop" id="drop"><input id="file" type="file" accept="image/jpeg,image/png"><span class="upload-icon">＋</span><strong>Drop a photo here</strong><small>or click to browse · JPG / PNG</small></label></section>
+    <section class="workspace">
+      <div class="preview-card"><div class="preview-head"><span id="fileName">No image loaded</span><span id="dimensions">—</span></div><div class="canvas-wrap"><canvas id="canvas"></canvas><div id="empty" class="empty"><span>✦</span><p>Your preview appears here</p><small>Upload a photo to start styling</small></div></div></div>
+      <aside class="panel">
+        <div class="panel-section"><div class="section-title"><span>01</span> COLOUR GRADE</div><div id="presets" class="presets"></div></div>
+        <div class="panel-section"><div class="section-title"><span>02</span> WATERMARK</div><label class="field">Camera brand<select id="brand"></select></label><label class="field">Your name<input id="name" value="Monster" maxlength="28"></label><label class="field">Font<select id="font"><option value="Inter">Inter / Clean</option><option value="Space Grotesk">Space Grotesk / Bold</option><option value="DM Mono">DM Mono / Technical</option><option value="Georgia">Georgia / Editorial</option></select></label><div class="grid"><label class="field">Size <input id="size" type="range" min="12" max="120" value="34"></label><label class="field">Opacity <input id="opacity" type="range" min="10" max="100" value="88"></label></div><div class="grid"><label class="field">Position<select id="position"><option value="bottom-right">Bottom right</option><option value="bottom-left">Bottom left</option><option value="top-right">Top right</option><option value="top-left">Top left</option><option value="center">Center</option></select></label><label class="field">Style<select id="style"><option value="solid">Solid</option><option value="outline">Outline</option><option value="glow">Glow</option></select></label></div><label class="check"><input id="showBrand" type="checkbox" checked> Show camera brand treatment</label></div>
+        <div class="panel-foot"><button id="download" class="button primary full" disabled>Download finished image</button><p>Everything runs locally in your browser. Your photo never leaves this device.</p></div>
+      </aside>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body></html>
